@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+.letters {
+  list-style: none;
+  font-weight: 20px;
+}
+
+.letter {
+  background-color: aqua;
+  display: inline;
+}
