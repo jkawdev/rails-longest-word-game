@@ -8,8 +8,10 @@
   <% end %>
 </ul>
 
-<form action="/score" method="post" data-turbo="false">
-  <input type="Write the longest word you think" name="word">
-  <input type="Submit" value="Play!" class="btn btn-primary">
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-</form>
+<div data-controller="dictionary" data-action="submit->dictionary#search">
+  <form action="/score" method="post" data-turbo="false">
+    <input type="Write the longest word you think" name="word" data-dictionary-target="word">
+    <input type="Submit" value="Play!" class="btn btn-primary">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  </form>
+</div>
